@@ -1,0 +1,2 @@
+# Dashboard-Project
+In this dashboard project, I summarized around 32,000 job postings related to various fields of Data Science collected from different websites around the world. The goal was to present the key insights and statistics in a single, interactive page using visualizations and data-driven summaries.
