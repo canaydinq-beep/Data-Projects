@@ -1,4 +1,4 @@
-#H1 Job Posting Analysis and Data Transformation (ETL)
+# Job Posting Analysis and Data Transformation (ETL)
 
 This project involves the analysis of a job postings dataset to extract insights regarding market trends, salary distributions, and job demand. The primary focus of the work is the data transformation (ETL) process, converting raw data into a structured format suitable for detailed reporting.
 
