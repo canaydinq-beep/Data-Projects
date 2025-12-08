@@ -65,3 +65,5 @@ Open AnalyzedDataset.xlsx in Microsoft Excel.
 To view the data transformation steps within Excel, navigate to the Data tab and select Queries & Connections.
 
 Alternatively, you can open the .m files in any text editor to review the raw code logic used for the transformations.
+
+![Query Dependencies](Query%20Dependencies.png)
