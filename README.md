@@ -20,6 +20,5 @@ This repository is organized into separate folders for each project. Inside each
 * Datasets (or links to them)
 * A specific `README.md` explaining the project in detail.
 
-
 ---
 *Feel free to explore the code and reach out if you have any questions or collaboration ideas!*
