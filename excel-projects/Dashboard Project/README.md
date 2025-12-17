@@ -1,42 +1,65 @@
-📊 Data Science Salary Dashboard Project
-Bu proje, veri bilimi dünyasındaki maaş trendlerini ve iş piyasası dinamiklerini analiz etmek için geliştirilmiş, tamamen etkileşimli bir Excel Dashboard çalışmasıdır. Projenin en güçlü yanı, statik raporlar yerine ileri seviye Excel mimarisi kullanılarak oluşturulmuş dinamik yapısıdır.
+# 🌍 Data Science Salary & Job Market Dashboard
 
-🛠️ Teknik Hazırlık Süreci
-Dashboard'u oluştururken izlediğim adımlar ve kullandığım teknikler aşağıdadır:
+This project is an advanced **interactive Excel Dashboard** designed to analyze the global landscape of Data Science job postings. Based on a massive dataset of over **32,000+ job listings**, it provides statistical insights into salaries, job distribution, and employment types across the world.
 
-1. Veri Yapılandırma ve Veri Modeli
-Projenin temeli, binlerce satırlık ham verinin işlenmesine dayanıyor. Verileri daha yönetilebilir kılmak ve formüllerde dinamik referanslar oluşturabilmek için ham veri setini Excel Table formatına dönüştürdüm.
+![Data Science Dashboard Preview](Project%20Image%201.png)
 
-Veri Standardizasyonu: Maaş verileri yıllık bazda standardize edildi.
+---
 
-Temizleme: Eksik veya hatalı değerler (0 olanlar vb.) analiz dışında bırakılacak şekilde formüle edildi.
+## 🚀 Project Overview
 
-2. İleri Seviye Formülasyon Mimarisi
-Bu dashboard'un "motoru" Pivot tablolar değil, İleri Seviye Dinamik Dizi Formülleri'dir. Tabloları ve görselleri birbirine bağlamak için karmaşık mantıksal sorgular kullandım.
+The goal of this project is to simplify complex labor market data into an easy-to-read visual interface. By using this dashboard, users can filter through thousands of data points to find specific insights regarding the Data Science industry.
 
-Özellikle görselde de görebileceğin gibi, medyan maaşı belirli kriterlere (Ülke, İş Unvanı, Çalışma Tipi) göre filtrelemek için aşağıdaki mantığı kullandım:
+---
 
-Excel
+## 🏗️ How It Was Built (Step-by-Step)
 
-=MEDIAN(IF((jobs[job_country]=A2)*(jobs[salary_year_avg]<>0)*(ISNUMBER(SEARCH(type;jobs[job_schedule_type])))*(jobs[job_title_short]=title); jobs[salary_year_avg]))
-Boolean Mantığı: * operatörü ile "AND" (VE) koşullarını dizi içerisinde birleştirdim.
+This project isn't just a static report; it's a dynamic tool built on a robust data architecture. Here is the process behind the scenes:
 
-SEARCH & ISNUMBER: Kısmi metin eşleşmeleri üzerinden dinamik filtreleme sağladım.
+### 1️⃣ The Data Foundation
+The analysis is powered by a comprehensive dataset containing over **32,000 real-world job postings**. As seen below, the raw data includes critical dimensions such as *Job Location, Schedule Type, Posted Date, and Salary Estimates*.
 
-Dinamik Filtreleme: Kullanıcı dashboard üzerinde bir seçim yaptığında, arka plandaki bu formüller anlık olarak tüm grafikleri tetikler.
+![Raw Dataset Preview](Project%20Image%202.png)
+*A glimpse of the organized dataset serving as the backend.*
 
-3. Kullanıcı Arayüzü ve Görselleştirme
-Analiz sonuçlarını son kullanıcıya en net şekilde sunmak için çeşitli görselleştirme teknikleri uyguladım:
+### 2️⃣ Advanced Logic & Formulas
+To make the dashboard interactive **without using VBA**, I utilized complex array formulas and conditional logic. The metrics (e.g., Median Salary) calculate dynamically based on the user's selection in the slicers.
 
-Dinamik KPI Kartları: Toplam iş sayısı ve medyan maaş gibi kritik veriler için özel tasarım kartlar.
+![Advanced Excel Formulas](Project%20Image%203.png)
+*Example of the array formulas (MEDIAN, IF, SEARCH) used to handle dynamic filtering.*
 
-Coğrafi Dağılım: Ülke bazlı maaş farklılıklarını gösteren harita entegrasyonu.
+---
 
-Platform Analizi: En çok ilan yayınlayan platformların (LinkedIn, Indeed vb.) tespiti.
+## 💡 Key Features
+* **📊 Comparative Salary Analysis:** Visualizes salary differences between roles such as *Data Analyst*, *Machine Learning Engineer*, and *Data Scientist*.
+* **🗺️ Global Heatmap:** A map visualization showing the concentration of job postings across different countries.
+* **📉 Employment Type Breakdown:** Analysis of salaries based on contract types (*Full-time, Part-time, Contractor, etc.*).
+* **🎛️ Fully Interactive Slicers:** Users can dynamically filter the entire dashboard by:
+    * **Job Title**
+    * **Country**
+    * **Employment Type**
+* **📌 Key Metrics (KPIs):** Instant view of *Median Salary*, *Total Job Count*, and the *Top Job Platform* (e.g., Indeed) for the selected filters.
 
-🚀 Nasıl Kullanılır?
-Repoda bulunan Dashboard Project.xlsx dosyasını indirin.
+---
 
-Excel'i açıp "Düzenlemeyi Etkinleştir" diyerek formülleri aktif hale getirin.
+## 📂 Repository Contents
 
-Dashboard sekmesindeki filtre kutularını kullanarak istediğiniz pozisyon veya ülke için analiz yapın.
+Here is a breakdown of the files included in this repository:
+
+* **`Dashboard Project.xlsx`**: The main Excel file containing the raw data, calculations, and the interactive Dashboard.
+* **`Project Image 1.png`**: The final view of the Dashboard.
+* **`Project Image 2.png`**: Snapshot of the raw dataset structure.
+* **`Project Image 3.png`**: View of the backend formulas.
+
+---
+
+## 🛠 How to Use
+
+1.  **Download** the `Dashboard Project.xlsx` file.
+2.  Open the file in **Microsoft Excel**.
+3.  If prompted, click **"Enable Editing"** and **"Enable Content"** to ensure the interactive features work correctly.
+4.  Use the **Slicers** (gray buttons at the top) to filter the data.
+5.  Watch the charts and KPI cards update instantly!
+
+---
+*Created to demonstrate skills in Excel Data Visualization, Complex Formulas, and Statistical Analysis.*
